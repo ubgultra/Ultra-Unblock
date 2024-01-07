@@ -7,6 +7,8 @@
         margin: 0;
         overflow: hidden;
         font-family: Arial, sans-serif;
+<body onload = "displayRandomMessage()" ></body>
+
       }
         #background {
         position: absolute;
@@ -215,4 +217,34 @@
 ©2024 UBG Ultra, LLC.
  </div>
   </body>
+  </head>
+  <body>
+    <div class="bottom-right">
+A better version of ByeBlocker.
+ </div>
+  </body>
+
+
+function displayRandomMessage() {
+  var factData = [
+    "Parrots can talk.",
+    "Parrots love sunflower seeds.",
+    "Parrots can make your day.",
+    "Lion can't talk.",
+    "Lion is a part of cat family.",
+    "Lion is the King of the Jungle.",
+    "Rabbit can't talk.",
+    "Rabbits are cute.",
+    "Rabbits are small."
+  ];
+
+  var randomIndex = Math.floor(Math.random() * factData.length);
+  var randomMessage = factData[randomIndex];
+
+  var messageElement = document.getElementById("factData");
+  messageElement.innerHTML = randomMessage;
+}
+
+// Call the function when the page loads
+window.onload = displayRandomMessage;
   
